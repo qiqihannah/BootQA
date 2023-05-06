@@ -8,7 +8,7 @@ import hybrid
 import argparse
 
 def get_data(data_name):
-    data = pd.read_csv("dataset/"+data_name+".csv", dtype={"time": float, "rate": float})
+    data = pd.read_csv("code/dataset/"+data_name+".csv", dtype={"time": float, "rate": float})
     data = data.drop(data[data['rate'] == 0].index)
     return data
 
