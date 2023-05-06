@@ -11,7 +11,7 @@ from dimod.serialization.format import Formatter
 import argparse
 
 def get_data(data_name):
-    data = pd.read_csv("dadtaset/"+data_name+".csv", dtype={"time": float, "rate": float})
+    data = pd.read_csv("code/dataset/"+data_name+".csv", dtype={"time": float, "rate": float})
     data = data.drop(data[data['rate'] == 0].index)
     return data
 
@@ -95,6 +95,7 @@ def run_qpu(sample_list_total, data, sample_time, sample_size, data_name):
         selected_rate = [data["rate"].iloc[selected_list[index]] for index in range(selected_num)]
         fval = first_energy
         embedding = sampleset.info['embedding_context']['embedding']
+
         qubit_num = sum(len(chain) for chain in embedding.values())
 
         if i == 0:
@@ -165,7 +166,7 @@ if __name__ == '__main__':
     parser.add_argument('dn', type=str)
     args = parser.parse_args()
     index = args.i
-    index = index/10
+    index = int(index/10)
     repeat = args.r
     data_name = args.dn
     if data_name == "gsdtsr":
