@@ -14,6 +14,34 @@ Steps:
     2. cd ASE_submission
     3  conda env create -f ocean.yml
     4. conda activate ocean
+ 
+ # How to run
+ You can find the implementation of BootQA, EIDQ, VQ, and SA under the "code" folder.
+ 
+ ## To run BootQA
+ You can run the following command line in the terminal under the root of the reporistory.
+ ```
+ python code/bootqa.py [sub-problem size] [run] [dataset_name]
+ ```
+ You can implement experiments of various sub-problem sizes (i.e., 10, 20, ...). You can set the number of repeat by the run parameter. You can select which dataset to run (i.e., "paintcontrol", "gsdtsr", "iofrol").
+ 
+## To run EIDQ
+You can use the following command line in the terminal.
+ ```
+ python code/eidq.py [sub-problem size] [run] [dataset_name]
+ ```
+## To run VQ
+You can use the following command line in the terminal. Note that VQ can be implemented on the "paintcontrol" dataset.
+ ```
+ python code/vq.py [run]
+ ```
+ 
+## To run SA
+You can use the following command line in the terminal. Note that VQ can be implemented on the "paintcontrol" dataset.
+ ```
+ python code/sa.py [run] [dataset_name]
+ ```
+ 
 # Results:
 > **_NOTE:_** Each approach (BootQA, EIDQ, SA, and VQ ) has it's own folder. For BootQA and EIDQ the results are seperated by dataset/subproble_size/runs_number and for SA and VQ the results are seperated by dataset/runs_number
 
