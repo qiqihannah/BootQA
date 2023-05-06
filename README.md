@@ -55,7 +55,7 @@ For example for paintcontrol dataset for VQ run 0 the file path would be VQ/pain
 ## Files related to results of BootQA, EIDQ, and VQ:
 
     1. approach/dataset/size/run/summary.csv  (Contains summarized data for RQ results for each sub problem size)
-    2. approach/dataset/size/run/log.csv  (constains raw data of the final soultion for each sub problem size)
+    2. approach/dataset/size/run/log.csv  (Constains raw data of the each sub-solution, including selected test cases, embeddding time, QPU timing, embedding information, etc)
     3. approach/dataset/size/run/sample_info/ (this folder contains the candidate solutions in QA process in all excutions. For BootQA, each file contains the information of one sub-problem. For EIDQ, each file contains the information of one iteration. For VQ, it contains one file of the execution.)
     4. approach/dataset/size/run/result.csv (constains data of selected test cases)
 For example for paintcontrol dataset for BootQA for subproblem size 20 and run 0 the file path would be BootQA/paintcontrol/size_20/0/summary.csv
