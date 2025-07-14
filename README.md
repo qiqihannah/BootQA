@@ -1,6 +1,8 @@
 # Test Case Minimization with Quantum Annealers
 This repository contains the code necessary to reproduce the results of BootQA approach.
 
+![alt text](bootqa.png)
+
 # Installation
 Currently the repository only supports Linux distributions and is tested on Ubuntu 20.
 
